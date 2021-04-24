@@ -1,0 +1,3 @@
+[submodule "GrogLibs"]
+	path = GrogLibs
+	url = git@github.com:Kharzette/GrogLibs.git
