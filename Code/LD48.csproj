@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <OutputType>exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="SharpDX">
+      <HintPath>..\GrogLibs\SharpDX\Bin\$(Configuration)\net45\SharpDX.dll</HintPath>
+    </Reference>
+	<Reference Include="SharpDX.Mathematics">
+      <HintPath>..\GrogLibs\SharpDX\Bin\$(Configuration)\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+	<Reference Include="SharpDX.XAudio2">
+      <HintPath>..\GrogLibs\SharpDX\Bin\$(Configuration)\net45\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+	<Reference Include="SharpDX.DXGI">
+      <HintPath>..\GrogLibs\SharpDX\Bin\$(Configuration)\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+	<Reference Include="SharpDX.Direct3D11">
+      <HintPath>..\GrogLibs\SharpDX\Bin\$(Configuration)\net45\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+	<Reference Include="SharpDX.Desktop">
+      <HintPath>..\GrogLibs\SharpDX\Bin\$(Configuration)\net45\SharpDX.Desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrogLibs\BSPZone\BSPZone.csproj"/>
+    <ProjectReference Include="..\GrogLibs\AudioLib\AudioLib.csproj"/>
+    <ProjectReference Include="..\GrogLibs\InputLib\InputLib.csproj"/>
+    <ProjectReference Include="..\GrogLibs\MeshLib\MeshLib.csproj"/>
+    <ProjectReference Include="..\GrogLibs\ParticleLib\ParticleLib.csproj"/>
+    <ProjectReference Include="..\GrogLibs\SharedForms\SharedForms.csproj"/>
+    <ProjectReference Include="..\GrogLibs\MaterialLib\MaterialLib.csproj"/>
+    <ProjectReference Include="..\GrogLibs\UtilityLib\UtilityLib.csproj"/>
+    <ProjectReference Include="..\GrogLibs\EntityLib\EntityLib.csproj"/>
+    <ProjectReference Include="..\GrogLibs\EntityTranslators\QuakeTranslator\QuakeTranslator.csproj"/>
+	<ProjectReference Include="..\GrogLibs\GrogComponents\GrogComponents.csproj"/>
+  </ItemGroup>
+
+</Project>
