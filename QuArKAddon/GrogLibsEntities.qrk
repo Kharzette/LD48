@@ -1,0 +1,1351 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "GrogLibs Entities"
+  Toolbox Folders.qtx =
+  {
+    ToolBox = "New map Items..."
+    Root = "GrogLibs Entities.qtxfolder"
+    GrogLibs Entities.qtxfolder =
+    {
+      Info_Player_* entities.qtxfolder =
+      {
+        info_player_start:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "The normal starting point for a level."
+        }
+        info_player_coop:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Potential spawning position for coop games."
+        }
+        info_player_deathmatch:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Potential spawning position for deathmatch games."
+        }
+        info_player_intermission:e =
+        {
+          origin = "0 0 0"
+          angles = "30 225 0"
+          ;desc = "The end of Level , end of Match, intermission point will be"
+           " at one of these."
+        }
+      }
+      Light_* entities.qtxfolder =
+      {
+        light:e =
+        {
+          origin = "0 0 0"
+          _color = "1 1 1"
+          light = "300"
+          activated = "1"
+          ;desc = "Invisible Light Source."
+        }
+        light_sun:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Distant light that casts through sky portals"
+          _color = "1 1 1"
+          strength = "255"
+          angles = "50 -100 0"
+        }
+      }
+      Weapon_* entities.qtxfolder =
+      {
+        weapon_whatever:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Change this, and make more for whatever is needed"
+        }
+      }
+      Ammo_* entities.qtxfolder =
+      {
+        ammo_whatever:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Change this, and make more for whatever is needed"
+        }
+      }
+      Monster_* entities.qtxfolder =
+      {
+        monster_assgoblin:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Change this, and make more for whatever is needed"
+        }
+      }
+      Path & Combat entities.qtxfolder =
+      {
+        point_combat:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Generic AI goal"
+        }
+      }
+      Misc_* entities.qtxfolder =
+      {
+        misc_whatever:e =
+        {
+          origin = "0 0 0"
+          angle = "360"
+          ;desc = "Change this, and make more for whatever is needed"
+        }
+        misc_sound:e =
+        {
+          origin = "0 0 0"
+          effect_name = "boing"
+          looping = "1"
+          volume = "1"
+          activated = "1"
+          ;desc = "Emit a sound here"
+        }
+        misc_particle_emitter:e =
+        {
+          origin = "0 0 0"
+          tex_name = "GlowParticle"
+          start_color = "1 1 1"
+          start_alpha = "1"
+          max_particles = "256"
+          shape = "0"
+          shape_size = "16"
+          grav_loc = "0"
+          grav_strength = "0"
+          start_size = "1"
+          start_alpha = "1"
+          emit_ms = "0.04"
+          velocity_min = "-5"
+          velocity_max = "5"
+          size_velocity_min = "-0.5"
+          size_velocity_max = "0.5"
+          spin_velocity_min = "0"
+          spin_velocity_max = "0"
+          alpha_velocity_min = "0"
+          alpha_velocity_max = "0"
+          lifetime_min = "3"
+          lifetime_max = "4"
+          color_velocity_min = "0 0 0"
+          color_velocity_max = "0 0 0"
+          activated = "1"
+          ;desc = "Emit particles from this entity"
+        }
+        misc_trilight_info:e =
+        {
+          origin = "0 0 0"
+          ;desc = "An automatically generated description"
+          trilight1 = ".5 .5 .5"
+          trilight2 = ".3 .3 .3"
+        }
+        misc_particle_gravity:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Link to Emitter to define grav_pos"
+        }
+      }
+      Key_* entities.qtxfolder =
+      {
+        key_whatever:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Change this, and make more for whatever is needed"
+        }
+      }
+      Item_* entities.qtxfolder =
+      {
+        item_whatever:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Change this, and make more for whatever is needed"
+        }
+      }
+      Func_* entities.qtxfolder =
+      {
+        func_button:b =
+        {
+          health = "0"
+          delay = "3"
+          ;desc = "Just an every day Button."
+          poly:p =
+          {
+            east:f =
+            {
+              v = '16 16 16 16 144 16 16 16 144'
+              tex = "Red"
+              tv = '-33 33 95 33 -33 -95'
+            }
+            west:f =
+            {
+              v = '-16 16 16 -16 16 144 -16 144 16'
+              tex = "Red"
+              tv = '-1 33 127 33 -1 -95'
+            }
+            north:f =
+            {
+              v = '32 16 16 32 16 144 160 16 16'
+              tex = "Red"
+              tv = '15 33 143 33 15 -95'
+            }
+            south:f =
+            {
+              v = '32 -16 16 160 -16 16 32 -16 144'
+              tex = "Red"
+              tv = '-49 33 79 33 -49 -95'
+            }
+            up:f =
+            {
+              v = '32 16 16 160 16 16 32 144 16'
+              tex = "Red"
+              tv = '-33 -49 -33 79 95 -49'
+            }
+            down:f =
+            {
+              v = '32 16 -16 32 144 -16 160 16 -16'
+              tex = "Red"
+              tv = '1 49 1 -79 -127 49'
+            }
+          }
+        }
+        func_door:b =
+        {
+          ;desc = "The standard entity for doors."
+          targetname = ""
+          target = ""
+          poly:p =
+          {
+            east:f =
+            {
+              v = '64 0 0 64 128 0 64 0 128'
+              tex = "[auto]"
+            }
+            west:f =
+            {
+              v = '-64 0 0 -64 0 128 -64 128 0'
+              tex = "[auto]"
+              m = "1"
+            }
+            north:f =
+            {
+              v = '0 64 0 0 64 128 128 64 0'
+              tex = "[auto]"
+              m = "1"
+            }
+            south:f =
+            {
+              v = '0 -64 0 128 -64 0 0 -64 128'
+              tex = "[auto]"
+            }
+            up:f =
+            {
+              v = '0 0 64 128 0 64 0 128 64'
+              tex = "[auto]"
+            }
+            down:f =
+            {
+              v = '0 0 -64 0 128 -64 128 0 -64'
+              tex = "[auto]"
+              m = "1"
+            }
+          }
+        }
+        func_group:b =
+        {
+          ;desc = "Not used in game, used for editor convenience."
+        }
+        func_plat:b =
+        {
+          ;desc = "This is used for platforms or elevators."
+          target = ""
+          targetname = ""
+          poly:p =
+          {
+            east:f =
+            {
+              v = '64 0 0 64 128 0 64 0 128'
+              tex = "[auto]"
+            }
+            west:f =
+            {
+              v = '-64 0 0 -64 0 128 -64 128 0'
+              tex = "[auto]"
+              m = "1"
+            }
+            north:f =
+            {
+              v = '0 64 0 0 64 128 128 64 0'
+              tex = "[auto]"
+              m = "1"
+            }
+            south:f =
+            {
+              v = '0 -64 0 128 -64 0 0 -64 128'
+              tex = "[auto]"
+            }
+            up:f =
+            {
+              v = '0 0 64 128 0 64 0 128 64'
+              tex = "[auto]"
+            }
+            down:f =
+            {
+              v = '0 0 -64 0 128 -64 128 0 -64'
+              tex = "[auto]"
+              m = "1"
+            }
+          }
+        }
+        func_region:b =
+        {
+          ;desc = "Defines a region for whatever"
+          poly:p =
+          {
+            east:f =
+            {
+              v = '64 0 0 64 128 0 64 0 128'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            west:f =
+            {
+              v = '-64 0 0 -64 0 128 -64 128 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            north:f =
+            {
+              v = '0 64 0 0 64 128 128 64 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            south:f =
+            {
+              v = '0 -64 0 128 -64 0 0 -64 128'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            up:f =
+            {
+              v = '0 0 64 128 0 64 0 128 64'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            down:f =
+            {
+              v = '0 0 -64 0 128 -64 128 0 -64'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+          }
+        }
+        func_wall:b =
+        {
+          ;desc = "Make a wall appear or dissappear by connecting a func_butto"
+           "n to this."
+          targetname = ""
+          target = ""
+          poly:p =
+          {
+            east:f =
+            {
+              v = '64 0 0 64 128 0 64 0 128'
+              tex = "[auto]"
+            }
+            west:f =
+            {
+              v = '-64 0 0 -64 0 128 -64 128 0'
+              tex = "[auto]"
+              m = "1"
+            }
+            north:f =
+            {
+              v = '0 64 0 0 64 128 128 64 0'
+              tex = "[auto]"
+              m = "1"
+            }
+            south:f =
+            {
+              v = '0 -64 0 128 -64 0 0 -64 128'
+              tex = "[auto]"
+            }
+            up:f =
+            {
+              v = '0 0 64 128 0 64 0 128 64'
+              tex = "[auto]"
+            }
+            down:f =
+            {
+              v = '0 0 -64 0 128 -64 128 0 -64'
+              tex = "[auto]"
+              m = "1"
+            }
+          }
+        }
+      }
+      Target_* entities.qtxfolder =
+      {
+        target_whatever:e =
+        {
+          origin = "0 0 0"
+          ;desc = "Change this, and make more for whatever is needed"
+        }
+        target_spotlight:e =
+        {
+          origin = "0 0 0"
+          ;desc = "A target for light to create a spotlight."
+        }
+        target_move_stage:e =
+        {
+          origin = "0 0 0"
+          ;desc = "A single stage of movement for a model"
+          move_axis = "-90 0 0"
+          move_amount = "64"
+          rotate_to_target = "false"
+          rotation_target = "0 0 0"
+          rotation_rate = "0 0 0"
+          stage_interval = "1000"
+          ease_in = "0.1"
+          ease_out = "0.1"
+          sound_forward = "forward"
+          sound_backward = "back"
+          target = ""
+          targetname = ""
+        }
+      }
+      Trigger_* entities.qtxfolder =
+      {
+        trigger_stand_in:b =
+        {
+          gravity = "1.0"
+          activated = "0"
+          ;desc = "Fires events on entry and exit"
+          poly:p =
+          {
+            east:f =
+            {
+              v = '64 0 0 64 128 0 64 0 128'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            west:f =
+            {
+              v = '-64 0 0 -64 0 128 -64 128 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            north:f =
+            {
+              v = '0 64 0 0 64 128 128 64 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            south:f =
+            {
+              v = '0 -64 0 128 -64 0 0 -64 128'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            up:f =
+            {
+              v = '0 0 64 128 0 64 0 128 64'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            down:f =
+            {
+              v = '0 0 -64 0 128 -64 128 0 -64'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+          }
+        }
+        trigger_once:b =
+        {
+          activated = "0"
+          ;desc = "Use this to trigger something only once."
+          poly:p =
+          {
+            east:f =
+            {
+              v = '64 0 0 64 128 0 64 0 128'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            west:f =
+            {
+              v = '-64 0 0 -64 0 128 -64 128 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            north:f =
+            {
+              v = '0 64 0 0 64 128 128 64 0'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            south:f =
+            {
+              v = '0 -64 0 128 -64 0 0 -64 128'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            up:f =
+            {
+              v = '0 0 64 128 0 64 0 128 64'
+              tex = "[trigger]"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+            down:f =
+            {
+              v = '0 0 -64 0 128 -64 128 0 -64'
+              tex = "[trigger]"
+              m = "1"
+              Contents = "2048"
+              Flags = "32768"
+              Value = "0"
+            }
+          }
+        }
+      }
+    }
+  }
+  Default forms.fctx =
+  {
+    t_item_form:form =
+    {
+      Caption = "Monster item Spawns"
+      item: =
+      {
+        Typ = "C"
+        Txt = "Weapons Classes"
+        Items = "weapon_whatever"
+        Values = "weapon_whatever"
+      }
+      item: =
+      {
+        Typ = "C"
+        Txt = "Ammo Classes"
+        Items = "ammo_whatever"
+        Values = "ammo_whatever"
+      }
+      item: =
+      {
+        Typ = "C"
+        Txt = "Item Classes"
+        Items = "item_whatever"	//seperate additional stuff with $0"
+        Values = "item_whatever"
+      }
+      item: =
+      {
+        Typ = "C"
+        Txt = "Key Classes"
+        Items = "key_whatever"
+        Values = "key_whatever"
+      }
+    }
+  }
+  Entity forms.fctx =
+  {
+    ammo_whatever:form =
+    {
+      Help = "Generic ammo, needs changing to game specific"
+      bbox = '-16 -16 0 16 16 32'
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Rotation about Y in degrees"
+      }
+    }
+    func_button:form =
+    {
+      Help = "Touch to trigger something"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before the func_button fires"
+      }
+      health: =
+      {
+        Txt = "&"
+        Hint = "When non-zero, makes the func_button shootable"
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered"
+      }
+    }
+    target_move_stage:form =
+    {
+      Help = "Invisible controller for model movement"
+      bbox = '-16 -16 -16 16 16 16'
+      ;desc: =
+      {
+        Txt = "&"
+        Hint = "A single stage of movement for a model"
+      }
+      move_axis: =
+      {
+        Txt = "&"
+        Hint = "Axis angle to move along"
+      }
+      move_amount: =
+      {
+        Txt = "&"
+        Hint = "Amount to move along axis"
+      }
+      rotate_to_target: =
+      {
+        Txt = "&"
+        Hint = "true if rotating to a fixed target"
+      }
+      rotation_target: =
+      {
+        Txt = "&"
+        Hint = "target xyz rotation"
+      }
+      rotation_rate: =
+      {
+        Txt = "&"
+        Hint = "rotation rate in degrees per second"
+      }
+      stage_interval: =
+      {
+        Txt = "&"
+        Hint = "Duration of motion"
+      }
+      ease_in: =
+      {
+        Txt = "&"
+        Hint = "Movement easing"
+      }
+      ease_out: =
+      {
+        Txt = "&"
+        Hint = "Movement easing"
+      }
+      sound_forward: =
+      {
+        Txt = "&"
+        Hint = "Sound to play on forward"
+      }
+      sound_backward: =
+      {
+        Txt = "&"
+        Hint = "Sound to play on backward"
+      }
+    }
+    func_door:form =
+    {
+      Help = "A newly created Entity type."
+      bbox = '-16 -16 -16 16 16 16'
+      ;desc: =
+      {
+        Txt = "&"
+        Hint = "The standard entity for doors."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of this entity for targeting by others"
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered"
+      }
+    }
+    func_plat:form =
+    {
+      Help = "A newly created Entity type."
+      bbox = '-16 -16 -16 16 16 16'
+      ;desc: =
+      {
+        Txt = "&"
+        Hint = "This is used for platforms or elevators."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered"
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of this entity for targeting by others"
+      }
+    }
+    func_wall:form =
+    {
+      Help = "A newly created Entity type."
+      bbox = '-16 -16 -16 16 16 16'
+      ;desc: =
+      {
+        Txt = "&"
+        Hint = "Make a wall appear or dissappear by connecting a func_button t"
+         "o this."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of this entity for targeting by others"
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered"
+      }
+    }
+    func_group:form =
+    {
+      Help = "Used to group brushes together just for editor convenience."
+    }
+    item_whatever:form =
+    {
+      Help = "Change this to something game specific."
+      bbox = '-16 -16 0 16 16 32'
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds"
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " item is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the item is touc"
+         "hed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific item entity."
+      }
+    }
+    info_player_coop:form =
+    {
+      Help = "Potential spawning position for coop games."
+      bbox = '-16 -16 0 16 16 72'
+      mdl = "players/female/tris.md2"
+      mdlskin = "players/female/brianna.pcx"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name used for changing from other maps."
+      }
+    }
+    info_player_deathmatch:form =
+    {
+      Help = "Potential spawning position for deathmatch games."
+      bbox = '-16 -16 0 16 16 72'
+      mdl = "models/objects/dmspot/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific info_player_deathmatch."
+      }
+    }
+    info_player_intermission:form =
+    {
+      Help = "The end of Level , end of Match, intermission point will be at o"
+       "ne of these."
+      bbox = '-16 -16 -16 16 16 16'
+      mdl = "models/weapons/g_flareg/tris.md2"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific info_player_intermission."
+      }
+    }
+    info_player_start:form =
+    {
+      Help = "The normal starting point for a level."
+      bbox = '-16 -16 0 16 16 72'
+      mdl = "players/male/tris.md2"
+      mdlskin = "players/male/cipher.pcx"
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction on the XY plane. (Default=0)."
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific info_player_start."$0D"When loading a map"
+         " with multiple info_player_starts from the console,"$0D"the start th"
+         "at the player will spawn at will be the first unnamed start found in"
+         " the map file."$0D"If all starts are named, it will be the first sta"
+         "rt found."
+      }
+    }
+    key_whatever:form =
+    {
+      Help = "Change this to something game specific."
+      bbox = '-16 -16 0 16 16 32'
+      mdl = "models/items/keys/target/tris.md2"
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before target, killtarget and m"
+         "essage will fire after the key is touched by the player. (Default=0)."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " key is touched by the player."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the key is touch"
+         "ed by the player."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific key entity."
+      }
+    }
+    light:form =
+    {
+      Help = "Invisible Light Source."
+      bbox = '-8 -8 -8 8 8 8'
+      _color: =
+      {
+        Typ = "LN"
+        Txt = "&"
+        Hint = "Specifies light color in relative RGB Values. (Default=1 1 1)."
+         " any # can be negative for mixed light/darkness"
+      }
+      _color: =
+      {
+        Txt = "&"
+        Hint = "Specifies light color in relative RGB Values. (Default=1 1 1)."
+         " any # can be negative for mixed light/darkness"
+      }
+      _cone: =
+      {
+        Txt = "&"
+        Hint = "Specifies size of spotlight cone arc, in degrees. Range is 10-"
+         "90. (Default=10)."$0D"Ignored if no target set."
+      }
+      light: =
+      {
+        Txt = "&"
+        Hint = "Specifies light brightness level. (Default=300). # can be nega"
+         "tive, casting darkness"
+      }
+      style: =
+      {
+        Typ = "C"
+        Txt = "&"
+        Hint = "Specifies lightstyle Type. (Default=0)."$0D"Ignored when death"
+         "match=1."$0D"styles 32-62 are assigned by the light program for swit"
+         "chable lights."$0D"63 is for testing."
+        Items = "0) Normal"$0D"1) Flicker (first variety)"$0D"2) Slow Strong S"
+         "trobe"$0D"3) Candle (first variety)"$0D"4) Fast Strobe"$0D"5) Gentle"
+         " Pulse"$0D"6) Flicker (second variety)"$0D"7) Candle (second variety)"
+         ""$0D"8) Candle (third variety)"$0D"9) Slow Strobe (fourth variety)"
+         ""$0D"10) Flourescent Flicker"$0D"11) Slow Pulse (never to full)"
+        Values = "0"$0D"1"$0D"2"$0D"3"$0D"4"$0D"5"$0D"6"$0D"7"$0D"8"$0D"9"$0D""
+         "10"$0D"11"
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity the light aims at. If the light has a"
+         " target set, it is a spotlight. target_spotlight to make a spotlight."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific light."$0D"Lights with targetnames are pr"
+         "esent as entities at runtime, and are therefore edicts."$0D"Addition"
+         "ally, each uniquely named light is considered as a unique lightstyle"
+         " during the radiosity compile process."
+      }
+      activated: =
+      {
+        Txt = "&"
+        Hint = "Start on? (1 yes, 0 no)"
+      }
+    }
+    misc_whatever:form =
+    {
+      Help = "Change this to something game specific."
+      bbox = '-16 -16 0 16 16 32'
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the actor on the XY plane. (Defa"
+         "ult=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the whatever."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific whatever."
+      }
+    }
+    misc_particle_emitter:form =
+    {
+      Help = "Emit particles from this entity"
+      bbox = '-16 -16 -24 16 16 32'
+      tex_name: =
+      {
+        Txt = "&"
+        Hint = "Particle texture name including extension"
+      }
+      start_color: =
+      {
+        Typ = "LN"
+        Hint = "Click here to pick the particle color."
+      }
+      start_alpha: =
+      {
+        Txt = "&"
+        Hint = "Alpha component of the color"
+      }
+      max_particles: =
+      {
+        Txt = "&"
+        Hint = "Size of the particle buffers"
+      }
+      shape: =
+      {
+        Txt = "&"
+        Hint = "0 - Point, 1 - Sphere, 2 - Box, 3 - Line, 4 - Plane"
+      }
+      shape_size: =
+      {
+        Txt = "&"
+        Hint = "Size of emitter shape (radius)"
+      }
+      grav_loc: =
+      {
+        Txt = "&"
+        Hint = "Position gravity pulls particles towards"
+      }
+      grav_strength: =
+      {
+        Txt = "&"
+        Hint = "Power of the gravitational force"
+      }
+      start_size: =
+      {
+        Txt = "&"
+        Hint = "Starting size of the particle quad"
+      }
+      start_alpha: =
+      {
+        Txt = "&"
+        Hint = "0 to 1 alpha value to start at"
+      }
+      emit_ms: =
+      {
+        Txt = "&"
+        Hint = "Number of particles to emit per millisecond"
+      }
+      velocity_min: =
+      {
+        Txt = "&"
+        Hint = "Velocity minimum"
+      }
+      velocity_max: =
+      {
+        Txt = "&"
+        Hint = "Velocity maximum"
+      }
+      size_velocity_min: =
+      {
+        Txt = "&"
+        Hint = "Shrink or grow minimum"
+      }
+      size_velocity_max: =
+      {
+        Txt = "&"
+        Hint = "Shrink or grow maximum"
+      }
+      spin_velocity_min: =
+      {
+        Txt = "&"
+        Hint = "Spin velocity minimum"
+      }
+      spin_velocity_max: =
+      {
+        Txt = "&"
+        Hint = "Spin velocity maximum"
+      }
+      alpha_velocity_min: =
+      {
+        Txt = "&"
+        Hint = "Fade in or out velocity minimum"
+      }
+      alpha_velocity_max: =
+      {
+        Txt = "&"
+        Hint = "Fade in or out velocity maximum"
+      }
+      lifetime_min: =
+      {
+        Txt = "&"
+        Hint = "Particle life minimum time in seconds"
+      }
+      lifetime_max: =
+      {
+        Txt = "&"
+        Hint = "Particle life minimum time in seconds"
+      }
+      color_velocity_min: =
+      {
+        Txt = "&"
+        Hint = "Min rate of change for color xyz"
+      }
+      color_velocity_max: =
+      {
+        Txt = "&"
+        Hint = "Max rate of change for color xyz"
+      }
+      activated: =
+      {
+        Txt = "&"
+        Hint = "Start on? (1 or 0)"
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Target of the whatever."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific whatever."
+      }
+    }
+    misc_sound:form =
+    {
+      Help = "Emit audio from this entity"
+      bbox = '-16 -16 -16 16 16 16'
+      effect_name: =
+      {
+        Txt = "&"
+        Hint = "Sound effect name, no path or extension"
+      }
+      looping: =
+      {
+        Txt = "&"
+        Hint = "0 for no, 1 for yes"
+      }
+      volume: =
+      {
+        Txt = "&"
+        Hint = "0 to 1 volume level"
+      }
+      activated: =
+      {
+        Txt = "&"
+        Hint = "Start on? (1 or 0)"
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific audio entity."
+      }
+    }
+    monster_assgoblin:form =
+    {
+      Help = "Change this to something game specific."
+      bbox = '-16 -16 0 16 16 72'
+      angle: =
+      {
+        Txt = "&"
+        Hint = "Specifies the facing angle of the monster on the XY plane. (De"
+         "fault=0)."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the path_corner the monster will move to."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific monster."
+      }
+    }
+    point_combat:form =
+    {
+      Help = "Generic goal position for AI"
+      bbox = '-8 -8 -8 8 8 8'
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the next point_combat in the path."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific point_combat."
+      }
+    }
+    target_whatever:form =
+    {
+      Help = "Change this to something game specific"
+      bbox = '-8 -8 -8 8 8 8'
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the next target_actor/path_corner in the path."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific target_actor."
+      }
+    }
+    target_spotlight:form =
+    {
+      Help = "Used as a positional target for spotlights, etc."
+      bbox = '-8 -8 -8 8 8 8'
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific target_spotlight."
+      }
+    }
+    trigger_once:form =
+    {
+      Help = "Triggers once, then removes itself.  You must set the key - targ"
+       "et - to the name of another object in the level that has a matching - "
+       "targetname - ."
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before the trigger will fire af"
+         "ter being triggered. (Default=0)."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " trigger fires. Use \n for line breaks."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the trigger fire"
+         "s."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific trigger_once. If the trigger's targetname"
+         " is called and the trigger is already active, the trigger will fire."
+      }
+      activated: =
+      {
+        Txt = "&"
+        Hint = "Start triggered? (1 or 0)"
+      }
+    }
+    trigger_stand_in:form =
+    {
+      Help = "Fires events on entry and exit.  You must set the key - target -"
+       " to the name of another object in the level that has a matching - targ"
+       "etname - ."
+      delay: =
+      {
+        Txt = "&"
+        Hint = "Specifies the delay in seconds before the trigger will fire af"
+         "ter being triggered. (Default=0)."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the character string to print to the screen when the"
+         " trigger fires. Use \n for line breaks."
+      }
+      target: =
+      {
+        Txt = "&"
+        Hint = "Targetname of the entity to be triggered when the trigger fire"
+         "s."
+      }
+      targetname: =
+      {
+        Txt = "&"
+        Hint = "Name of the specific trigger_once. If the trigger's targetname"
+         " is called and the trigger is already active, the trigger will fire."
+      }
+      activated: =
+      {
+        Txt = "&"
+        Hint = "Start triggered? (1 or 0)"
+      }
+    }
+    worldspawn:form =
+    {
+      Help = "Only used for the world."
+      SunShadowAtten: =
+      {
+        Txt = "&"
+        Hint = "The dist dynamic sun shadows drop off (Default=200)."
+      }
+      gravity: =
+      {
+        Txt = "&"
+        Hint = "Specifies the gravity of map. (Default=800)."
+      }
+      message: =
+      {
+        Txt = "&"
+        Hint = "Specifies the title of the map."
+      }
+    }
+    light_sun:form =
+    {
+      Help = "A newly created Entity type."
+      bbox = '-16 -16 -16 16 16 16'
+      ;desc: =
+      {
+        Txt = "&"
+        Hint = "Distant light that casts through sky portals"
+      }
+      _color: =
+      {
+        Txt = "&"
+        Hint = "Light color RGB, default (1 1 1)"
+      }
+      _color: =
+      {
+        Typ = "LN"
+        Txt = "&"
+        Hint = "Light color RGB, default (1 1 1)"
+      }
+      strength: =
+      {
+        Txt = "&"
+        Hint = "An unknown field of some sort"
+      }
+      angles: =
+      {
+        Txt = "&"
+        Hint = "Specifies a facing direction in 3 dimensions, defined by pitch"
+         ", yaw, and roll. (Default=0 0 0)."
+      }
+    }
+    misc_trilight_info:form =
+    {
+      Help = "A newly created Entity type."
+      bbox = '-16 -16 0 16 16 32'
+      ;desc: =
+      {
+        Txt = "&"
+        Hint = "Sets nearby fill light values"
+      }
+      trilight1: =
+      {
+        Txt = "&"
+        Hint = "0 to 1 RGB Value such as 0.5 0.5 0.5"
+      }
+      trilight2: =
+      {
+        Txt = "&"
+        Hint = "0 to 1 RGB Value such as 0.5 0.5 0.5"
+      }
+    }
+    misc_particle_gravity:form =
+    {
+      Help = "A newly created Entity type."
+      bbox = '-16 -16 -16 16 16 16'
+      ;desc: =
+      {
+        Txt = "&"
+        Hint = "Link to an Emitter to define grav_pos"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+QQRKSRC1
+{
+  QuArKProtected = "1"
+  Description = "GrogLibs Textures"
+
+  Textures.qtx =
+  {
+    ToolBox = "Texture Browser..."
+    Root = "GrogLibs Textures.qtxfolder"
+    HTML = "intro.texturebrowser.html"
+
+    GrogLibs Textures.qtxfolder =
+    {
+		Solids.txlist	=
+		{
+			Brick.wl			={ a = "." }
+			Clip.wl				={ a = "." }
+			ForceField.wl		={ a = "." }
+			Grass.wl			={ a = "." }
+			Lava.wl				={ a = "." }
+			LogEnd.wl			={ a = "." }
+			MortaredStone.wl	={ a = "." }
+			RoughStone.wl		={ a = "." }
+			Slime.wl			={ a = "." }
+			SmooveStone.wl		={ a = "." }
+			Trigger.wl			={ a = "." }
+			Water.wl			={ a = "." }
+			Wood.wl				={ a = "." }
+			WoodBoards.wl		={ a = "." }
+			Origin.wl			={ a = "." }
+		}
+	}
+  }
+}
