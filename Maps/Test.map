@@ -1,0 +1,84 @@
+; This map has been written by QuArK - Quake Army Knife, QuArK 6.6
+; It is a map for the game GrogLibs.
+; For more information see QuArK's Home Page: http://quark.sourceforge.net/
+
+; Entity 0
+; worldspawn
+{
+ "classname" "worldspawn"
+; Brush 0
+; Border walls:g[1] -> East wall:p[1]
+ {
+  ( 432 0 96 ) ( 432 128 96 ) ( 560 0 96 ) RoughStone -432 0 0 1 1 ;TX1
+  ( 432 0 -96 ) ( 432 -128 -96 ) ( 560 0 -96 ) RoughStone -432 0 0 1 -1 ;TX1
+  ( 432 192 272 ) ( 432 192 400 ) ( 304 192 272 ) RoughStone 432 272 0 -1 1 ;TX1
+  ( 432 -192 272 ) ( 432 -192 400 ) ( 560 -192 272 ) RoughStone -432 272 0 1 1 ;TX1
+  ( 272 0 272 ) ( 272 0 400 ) ( 272 128 272 ) RoughStone 0 272 0 1 1 ;TX1
+  ( 256 0 272 ) ( 256 0 400 ) ( 256 -128 272 ) RoughStone 0 272 0 -1 1 ;TX1
+ }
+; Brush 1
+; Border walls:g[1] -> West wall:p[2]
+ {
+  ( 432 0 96 ) ( 432 128 96 ) ( 560 0 96 ) RoughStone -432 0 0 1 1 ;TX1
+  ( 432 0 -96 ) ( 432 -128 -96 ) ( 560 0 -96 ) RoughStone -432 0 0 1 -1 ;TX1
+  ( 432 192 272 ) ( 432 192 400 ) ( 304 192 272 ) RoughStone 432 272 0 -1 1 ;TX1
+  ( 432 -192 272 ) ( 432 -192 400 ) ( 560 -192 272 ) RoughStone -432 272 0 1 1 ;TX1
+  ( -256 0 272 ) ( -256 0 400 ) ( -256 128 272 ) RoughStone 0 272 0 1 1 ;TX1
+  ( -272 0 272 ) ( -272 0 400 ) ( -272 -128 272 ) RoughStone 0 272 0 -1 1 ;TX1
+ }
+; Brush 2
+; Border walls:g[1] -> North wall:p[3]
+ {
+  ( 432 0 96 ) ( 432 128 96 ) ( 560 0 96 ) RoughStone -432 0 0 1 1 ;TX1
+  ( 432 0 -96 ) ( 432 -128 -96 ) ( 560 0 -96 ) RoughStone -432 0 0 1 -1 ;TX1
+  ( 432 208 272 ) ( 432 208 400 ) ( 304 208 272 ) RoughStone 432 272 0 -1 1 ;TX1
+  ( 432 192 272 ) ( 432 192 400 ) ( 560 192 272 ) RoughStone -432 272 0 1 1 ;TX1
+  ( 256 0 272 ) ( 256 0 400 ) ( 256 128 272 ) RoughStone 0 272 0 1 1 ;TX1
+  ( -256 0 272 ) ( -256 0 400 ) ( -256 -128 272 ) RoughStone 0 272 0 -1 1 ;TX1
+ }
+; Brush 3
+; Border walls:g[1] -> South wall:p[4]
+ {
+  ( 432 0 96 ) ( 432 128 96 ) ( 560 0 96 ) RoughStone -432 0 0 1 1 ;TX1
+  ( 432 0 -96 ) ( 432 -128 -96 ) ( 560 0 -96 ) RoughStone -432 0 0 1 -1 ;TX1
+  ( 432 -192 272 ) ( 432 -192 400 ) ( 304 -192 272 ) RoughStone 432 272 0 -1 1 ;TX1
+  ( 432 -208 272 ) ( 432 -208 400 ) ( 560 -208 272 ) RoughStone -432 272 0 1 1 ;TX1
+  ( 256 0 272 ) ( 256 0 400 ) ( 256 128 272 ) RoughStone 0 272 0 1 1 ;TX1
+  ( -256 0 272 ) ( -256 0 400 ) ( -256 -128 272 ) RoughStone 0 272 0 -1 1 ;TX1
+ }
+; Brush 4
+; Border walls:g[1] -> Sky:p[5]
+ {
+  ( 432 0 112 ) ( 432 128 112 ) ( 560 0 112 ) RoughStone -432 0 0 1 1 ;TX1
+  ( 432 0 96 ) ( 432 -128 96 ) ( 560 0 96 ) RoughStone -432 0 0 1 -1 ;TX1
+  ( 432 192 272 ) ( 432 192 400 ) ( 304 192 272 ) RoughStone 432 272 0 -1 1 ;TX1
+  ( 432 -192 272 ) ( 432 -192 400 ) ( 560 -192 272 ) RoughStone -432 272 0 1 1 ;TX1
+  ( 256 0 272 ) ( 256 0 400 ) ( 256 128 272 ) RoughStone 0 272 0 1 1 ;TX1
+  ( -256 0 272 ) ( -256 0 400 ) ( -256 -128 272 ) RoughStone 0 272 0 -1 1 ;TX1
+ }
+; Brush 5
+; Border walls:g[1] -> Floor:p[6]
+ {
+  ( 432 0 -96 ) ( 432 128 -96 ) ( 560 0 -96 ) Grass -432 0 0 1 1 ;TX1
+  ( 432 0 -112 ) ( 432 -128 -112 ) ( 560 0 -112 ) Grass -432 0 0 1 -1 ;TX1
+  ( 432 192 272 ) ( 432 192 400 ) ( 304 192 272 ) Grass 432 272 0 -1 1 ;TX1
+  ( 432 -192 272 ) ( 432 -192 400 ) ( 560 -192 272 ) Grass -432 272 0 1 1 ;TX1
+  ( 256 0 272 ) ( 256 0 400 ) ( 256 128 272 ) Grass 0 272 0 1 1 ;TX1
+  ( -256 0 272 ) ( -256 0 400 ) ( -256 -128 272 ) Grass 0 272 0 -1 1 ;TX1
+ }
+}
+; Entity 1
+; info_player_start:e[2]
+{
+ "classname" "info_player_start"
+ "origin" "-144 0 -72"
+ "angle" "360"
+}
+; Entity 2
+; light:e[3]
+{
+ "classname" "light"
+ "light" "300"
+ "_color" "1 1 1"
+ "origin" "0 0 0"
+}

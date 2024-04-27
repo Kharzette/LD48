@@ -24,7 +24,8 @@
                 "build",
                 "${workspaceFolder}/LD48.sln",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+				"/p:Configuration=Debug"
             ],
             "problemMatcher": "$msCompile"
         }

@@ -1,2 +1,14 @@
 x	Add a font
-	add basic UI textures
+x	add basic UI textures
+	main character mesh
+	main character textures
+	main character animations
+		run
+		jump
+		punch
+		block
+		do ability
+		meditate sit
+		meditate idle
+		meditate rise
+		

@@ -24,6 +24,10 @@ namespace LD48
 			Slime	=(1 << 19)
 		}
 
+		//player vitals
+		int		mMaxHealth, mMaxMana;
+		int		mHealth, mMana;
+
 		//player character stuff
 		IArch					mPArch;
 		Character				mPChar;
@@ -293,7 +297,35 @@ namespace LD48
 		{
 			foreach(Input.InputAction act in actions)
 			{
+				if(act.mAction.Equals(Program.MyActions.AB1))
+				{
+					mHealth--;
+					UpdateHealthGump();
+				}
+				else if(act.mAction.Equals(Program.MyActions.AB2))
+				{
+					mMana--;
+					UpdateManaGump();
+				}
 			}
+		}
+
+
+		void UpdateHealthGump()
+		{
+			float	perc	=mHealth / (float)mMaxHealth;
+
+			mUI.ModifyGumpSecondLayerOffset("HealthMeter",
+				perc * Vector2.UnitY - Vector2.UnitY);
+		}
+
+
+		void UpdateManaGump()
+		{
+			float	perc	=mMana / (float)mMaxMana;
+
+			mUI.ModifyGumpSecondLayerOffset("ManaMeter",
+				perc * Vector2.UnitY - Vector2.UnitY);
 		}
 
 

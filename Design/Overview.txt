@@ -1,5 +1,6 @@
 Deeper and Deeper
 	Mystic meditation stuff to unlock more powarrrrrrrrrrr
+		meditation and abilities will get more particles as you go up in level
 	Series of levels with a meditation spot?
 	Learn mantra for meditation?  Like ultima shrines.
 	Combat challenges?  Or all puzzles?
@@ -66,6 +67,13 @@ x			polished stone
 x			Water
 x			Lava
 x			Slime
+			particles
+				sparkles
+				blood
+				electricity
+				smoke
+				frost
+				fire
 		Main character
 			Animations
 				basic run jump punch block
@@ -78,7 +86,7 @@ x			Slime
 				knockdown / getup
 				die
 		UI bits
-			health / mana
+x			health / mana
 		Ability icons
 		particles
 			smoke cold fire zappy electricity

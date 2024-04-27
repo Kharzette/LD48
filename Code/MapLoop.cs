@@ -327,6 +327,8 @@ namespace LD48
 				}
 			}
 
+			mHealth	=mMana	=mMaxHealth	=mMaxMana	=100;
+
 			//if debugger lands here, levels are sort of needed
 			//otherwise there's not much point for this test prog
 			ChangeLevel(mLevels[mCurLevel]);
@@ -1057,20 +1059,41 @@ namespace LD48
 		void MakeHealthManaGumps()
 		{
 			mUIMats	=new MatLib(mGD, mSKeeper);
-			mUIMats.CreateMaterial("Text");
-			mUIMats.SetMaterialEffect("Text", "2D.fx");
-			mUIMats.SetMaterialTechnique("Text", "Text");
+			mUIMats.CreateMaterial("Gump");
+			mUIMats.SetMaterialEffect("Gump", "2D.fx");
+			mUIMats.SetMaterialTechnique("Gump", "Gump");
 
-			mUI	=new ScreenUI(mGD.GD, mUIMats, 16);
+			mUIMats.CreateMaterial("KeyedGump");
+			mUIMats.SetMaterialEffect("KeyedGump", "2D.fx");
+			mUIMats.SetMaterialTechnique("KeyedGump", "KeyedGump");
+
+			mUI	=new ScreenUI(mGD.GD, mUIMats, 24);
 
 			Vector4	healthColour	=Vector4.UnitX + Vector4.UnitW;
 			Vector4	manaColour		=Vector4.UnitZ + Vector4.UnitW;
 
-			mUI.AddGump("UI\\HMBubble", "HealthBubble", healthColour,
+			//meter fill
+			mUI.AddGump("KeyedGump",
+				"UI\\BubbleMask", "UI\\MeterFill",
+				"HealthMeter", healthColour,
 				Vector2.UnitX * 20f + Vector2.UnitY * 520f,
 				Vector2.One * 1.5f);
 
-			mUI.AddGump("UI\\HMBubble", "ManaBubble", manaColour,
+			mUI.AddGump("KeyedGump",
+				"UI\\BubbleMask", "UI\\MeterFill",
+				"ManaMeter", manaColour,
+				Vector2.UnitX * 1070f + Vector2.UnitY * 520f,
+				Vector2.One * 1.5f);
+
+			//just the outline
+			mUI.AddGump("Gump",
+				"UI\\HMBubble", "UI\\HMBubble",
+				"HealthBubble", healthColour,
+				Vector2.UnitX * 20f + Vector2.UnitY * 520f,
+				Vector2.One * 1.5f);
+			mUI.AddGump("Gump",
+				"UI\\HMBubble", "UI\\HMBubble",
+				"ManaBubble", manaColour,
 				Vector2.UnitX * 1070f + Vector2.UnitY * 520f,
 				Vector2.One * 1.5f);
 		}

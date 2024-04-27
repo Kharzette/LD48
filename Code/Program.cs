@@ -22,7 +22,7 @@ namespace LD48
 			Turn, TurnLeft, TurnRight, Jump,
 			Pitch, PitchUp, PitchDown, Climb,
 			ToggleMouseLookOn, ToggleMouseLookOff,
-			SensitivityUp, SensitivityDown,
+			SensitivityUp, SensitivityDown, Exit,
 			AB1, AB2, AB3, AB4, AB5, AB6, AB7, AB8,
 			AbilityUI, Nothing
 		};
@@ -166,6 +166,16 @@ namespace LD48
 		{
 			List<Input.InputAction>	actions	=inp.GetAction();
 
+			//check for exit
+			foreach(Input.InputAction act in actions)
+			{
+				if(act.mAction.Equals(MyActions.Exit))
+				{
+					gd.RendForm.Close();
+					return	actions;
+				}
+			}
+
 			inp.ClampInputTimes(MaxTimeDelta);
 
 			if(bHoldClickTurn)
@@ -305,6 +315,11 @@ namespace LD48
 			inp.MapAxisAction(MyActions.MoveLeftRight, Input.MoveAxis.GamePadLeftXAxis);
 			inp.MapAxisAction(MyActions.MoveForwardBack, Input.MoveAxis.GamePadLeftYAxis);
 
+			//abilities
+			inp.MapAction(MyActions.AB1, ActionTypes.PressAndRelease,
+				Modifiers.None, System.Windows.Forms.Keys.D1);
+			inp.MapAction(MyActions.AB2, ActionTypes.PressAndRelease,
+				Modifiers.None, System.Windows.Forms.Keys.D2);
 
 			//sensitivity adjust
 			inp.MapAction(MyActions.SensitivityDown, ActionTypes.PressAndRelease,
@@ -315,6 +330,12 @@ namespace LD48
 			//non numpad will have shift held too
 			inp.MapAction(MyActions.SensitivityUp, ActionTypes.PressAndRelease,
 				Modifiers.ShiftHeld, System.Windows.Forms.Keys.Oemplus);
+
+			//exit
+			inp.MapAction(MyActions.Exit, ActionTypes.PressAndRelease,
+				Modifiers.None, System.Windows.Forms.Keys.Escape);
+			inp.MapAction(MyActions.Exit, ActionTypes.PressAndRelease,
+				Modifiers.None, Input.VariousButtons.GamePadBack);
 
 			return	inp;
 		}
